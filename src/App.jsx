@@ -14,7 +14,7 @@ function App() {
       });
       paypal.on("token", (token) => {
         const urlWithToken = `/payer_id=${token.payer_id}?id=${token.id}`;
-        window.location = `fffdev://${urlWithToken}`;
+        window.location = `fabfitfunApp://${urlWithToken}`;
       });
       paypal.start();
       return;
