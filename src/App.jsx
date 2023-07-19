@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div>
-      <h1>react-recurly demo</h1>
+      <h1>react-recurly demo v1</h1>
       <Elements>{recurlyTest()}</Elements>
     </div>
   );
