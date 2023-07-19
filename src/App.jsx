@@ -15,6 +15,7 @@ function App() {
       paypal.on("token", (token) => {
         const urlWithToken = `/payer_id=${token.payer_id}?id=${token.id}`;
         window.location = `fabfitfunApp://fff/${urlWithToken}`;
+        alert(window.location);
       });
       paypal.start();
       return;
