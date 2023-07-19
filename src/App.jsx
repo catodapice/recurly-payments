@@ -19,6 +19,9 @@ function App() {
         window.location = `fabfitfunApp://fff/${urlWithToken}`;
         alert(window.location);
       });
+      paypal.on("error", (error) => {
+        alert(error, "error");
+      });
       paypal.start();
       return;
     };
@@ -32,7 +35,7 @@ function App() {
 
   return (
     <div>
-      <h1>react-recurly demo v3</h1>
+      <h1>react-recurly demo v4</h1>
       <Elements>{recurlyTest()}</Elements>
     </div>
   );
