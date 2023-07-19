@@ -12,7 +12,9 @@ function App() {
           description: "This is difficult",
         },
       });
+      alert(paypal, "paypal");
       paypal.on("token", (token) => {
+        alert(token, "token");
         const urlWithToken = `/payer_id=${token.payer_id}?id=${token.id}`;
         window.location = `fabfitfunApp://fff/${urlWithToken}`;
         alert(window.location);
@@ -30,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <h1>react-recurly demo v2</h1>
+      <h1>react-recurly demo v3</h1>
       <Elements>{recurlyTest()}</Elements>
     </div>
   );
