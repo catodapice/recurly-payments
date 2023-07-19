@@ -13,14 +13,14 @@ function App() {
         },
       });
       alert(paypal, "paypal");
+      paypal.on("error", (error) => {
+        alert(error, "error");
+      });
       paypal.on("token", (token) => {
         alert(token, "token");
         const urlWithToken = `/payer_id=${token.payer_id}?id=${token.id}`;
         window.location = `fabfitfunApp://fff/${urlWithToken}`;
         alert(window.location);
-      });
-      paypal.on("error", (error) => {
-        alert(error, "error");
       });
       paypal.start();
       return;
