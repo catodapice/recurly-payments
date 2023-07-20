@@ -12,15 +12,18 @@ function App() {
           description: "This is difficult",
         },
       });
-      alert(paypal, "paypal");
+      alert(JSON.stringify(paypal));
       paypal.on("error", (error) => {
-        alert(error, "error");
+        alert(JSON.stringify(error));
+        console.log(error, "error");
       });
       paypal.on("token", (token) => {
-        alert(token, "token");
+        alert(JSON.stringify(token));
+        console.log(token, "token");
         const urlWithToken = `/payer_id=${token.payer_id}?id=${token.id}`;
         window.location = `fabfitfunApp://fff/${urlWithToken}`;
-        alert(window.location);
+        alert(JSON.stringify(window.location));
+        console.log(window.location, "window.location");
       });
       paypal.start();
       return;
@@ -35,7 +38,7 @@ function App() {
 
   return (
     <div>
-      <h1>react-recurly demo v4</h1>
+      <h1>react-recurly demo v5</h1>
       <Elements>{recurlyTest()}</Elements>
     </div>
   );
