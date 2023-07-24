@@ -5,7 +5,7 @@ import { Elements } from "@recurly/react-recurly";
 function App() {
   const recurlyTest = () => {
     const handleClick = () => {
-      window.location = `fabfitfunApp://`;
+      window.location = `fabfitfunApp://fff`;
 
       // window.recurly.configure("ewr1-q6rMPJ6ob6ZUZyffxfyevh");
       // const paypal = window.recurly.PayPal({
